@@ -1,12 +1,12 @@
 import random
 import string
 
-guesses = 8
+guesses = 8         # Number of guesses
 count = 0
 win = False
 guessed_letters = []
 
-def choose_word():
+def choose_word():      # chooses word from wordlist.txt
 
     f = open('wordlist.txt', 'r')
     wordlist = list(f)
@@ -14,7 +14,7 @@ def choose_word():
     f.close()
     return word
 
-def guess_letter():
+def guess_letter():     # function asks for single letter. returns error if not entered correctly
 
     guess = input("Guess a letter: ")
 
